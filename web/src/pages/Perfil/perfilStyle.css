@@ -1,0 +1,277 @@
+#perfil-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#perfil-page main {
+    background-color: var(--container-color);
+    width: 95%;
+    min-height: 100vh;
+    margin-top: 5vh;
+    border-radius: 5px;
+}
+
+#perfil-page main, #perfil-page #main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+#perfil-page #main {
+    width: 100%;
+}
+
+#perfil-page input#title {
+    border: none;
+    text-align: center;
+    cursor: text;
+    padding: 10px 0;
+}
+
+#perfil-page #profile-info {
+    margin-top: 30px;
+
+    width: 80%;
+    height: 350px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#perfil-page .anime-card {
+    width: 250px;
+    height: 100%;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#perfil-page .anime-card:hover {
+    opacity: 70%;
+}
+
+#perfil-page .anime-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#perfil-page .anime-label {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    color: var(--text-primary-color);
+    background-color: var(--title-area-color);
+    bottom: 5%;
+
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14pt;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#perfil-page #profile-statistics {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45%;
+}
+
+#perfil-page #profile-statistics div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 40%;
+
+    text-transform: uppercase;
+    font-size: 20pt;
+    color: var(--text-primary-color);
+    background-color: var(--secondary-list-color);
+}
+
+#perfil-page #badges {
+    background-color: var(--secondary-list-color);
+    border-radius: 5px;
+    margin-top: 40px;
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-bottom: 30px;
+}
+
+#perfil-page .badge-card {
+    margin-top: 25px;
+    width: 90%;
+    height: 120px;
+    background-color: var(--input-color);
+    border-radius: 5px;
+
+    position: relative;
+    padding: 10px;
+
+    display: flex;
+    transition: 0.2s;
+}
+
+#perfil-page .badge-card:hover {
+    opacity: 70%;
+}
+
+#perfil-page .requirement {
+    background-color: var(--badge-color);
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12pt;
+    position: absolute;
+    cursor: default;
+    top: 5px;
+    right: 5px;
+}
+
+#perfil-page .badge-picture {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+#perfil-page .badge-info {
+    margin: 5px 10px 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: var(--text-primary-color);
+    font-size: 14pt;
+    overflow: auto;
+    width: 90%;
+}
+
+#perfil-page .badge-title {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1250px) {
+    #perfil-page #profile-info {
+        height: 300px;
+        justify-content: center;
+    }
+    
+    #perfil-page .anime-card {
+        width: 200px;
+        margin: 0 15px;
+    }
+    
+    #perfil-page .anime-label {
+        font-size: 12pt;
+    }
+    
+    #perfil-page #profile-statistics {
+        width: 30%;
+        justify-content: center;
+    }
+    
+    #perfil-page #profile-statistics div {
+        font-size: 14pt;
+        height: 100px;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 1065px) {
+    #perfil-page #profile-statistics div {
+        font-size: 10pt;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 805px) {
+    #perfil-page #profile-info {
+        flex-wrap: wrap;
+    }
+
+    #perfil-page .anime-card {
+        height: 70%;
+        width: 140px;
+    }
+
+    #perfil-page .anime-label {
+        font-size: 8pt;
+    }
+
+    #perfil-page #profile-statistics {
+        width: 100%;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #perfil-page #profile-info {
+        width: 100%;
+        height: unset;
+    }
+
+    #perfil-page .anime-card {
+        height: 150px;
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    #perfil-page #profile-statistics div {
+        font-size: 8pt;
+        height: 40px;
+    }
+
+    #perfil-page #badges {
+        width: 100%;
+    }
+    
+    #perfil-page .badge-card {
+        width: 95%;
+        height: 240px;
+        padding: 45px 10px 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #perfil-page .requirement {
+        top: 5px;
+        right: unset;
+    }
+    
+    #perfil-page .badge-info {
+        text-align: center;
+        font-size: 12pt;
+        margin-top: 10px;
+    }
+    
+    #perfil-page .badge-title {
+        margin-bottom: 15px;
+    }
+
+    #perfil-page #profile-statistics div {
+        font-size: 7pt;
+    }
+}
